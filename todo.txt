@@ -1,0 +1,98 @@
+
+instalar cli >> https://dashboard.heroku.com/apps/shoppinglist-web-mvc/deploy/heroku-git
+
+na consola >> heroku
+
+login >> heroku login
+
+clonar projeto do git hub >>  git clone link do github
+
+entrar no projeto >> cd nome_do_projeto
+
+criar ficheiro no projeto Procfile > web: java -Dserver.port=$PORT -Dspring.profiles.active=prod -jar target/shoppinglist-0.0.1-SNAPSHOT.jar
+
+na consola novamente ou no ide > mvn install
+
+retirar o name na pasta target/surefire-reports .jar
+
+alterar ficheiros application.properties + application-prod.properties
+
+na consola >> entrar no projeto
+
+>> heroku git:remote -a shoppinglist-web-mvc
+>> git add .
+>> git commit -am "commit inicial"
+>> git push heroku master
+
+DONE retorno do link do projeto
+
+
+adicionar novo request >
+ 
+ 	@RequestMapping("/autenticacao")
+	public String autenticacao() {
+		return "autenticacao";
+	} 
+	
+	
+consola >> >> git add .
+>> git commit -am "correção login"
+>> git push heroku master
+
+
+DBeaver.io abrir db
+
+new conexão postgres:
+
+host + port + database + user + password
+test connection
+
+adicioar nas tabelas utilizador + perfil + utilizador_perfil 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#db h2 backup
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+#db postgres
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/BDShoppingList
+spring.datasource.username=postgres
+spring.datasource.password=admin
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.mvc.pathmatch.matching-strategy=ant-path-matcher 
+spring.mvc.static-path-pattern=/static/**
+
+spring.sql.init.platform=postgres
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_default=false
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+server.servlet.encoding.charset=UTF-8
+server.servlet.encoding.enabled=true
+server.servlet.encoding.force=true
+server.servlet.encoding.force-request=true
+server.servlet.encoding.force-response=true
+
+spring.servlet.multipart.max-file-size=10000KB
+spring.servlet.multipart.max-request-size=10000KB
