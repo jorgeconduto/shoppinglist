@@ -118,12 +118,12 @@ public class ListaComprasController {
 
 	@RequestMapping(method = RequestMethod.POST, value = "**/salvarProduto")
 	public ModelAndView salvarProduto(@Valid Produto produto) {
-		if (produto.getNome().isBlank() || produto.getValor() == null) {
+		if (produto.getNome() == null || produto.getValor() == null) {
 			ModelAndView mv = new ModelAndView("/produto/criar");
 			mv.addObject("produtoobj", produto);
 
 			List<String> msg = new ArrayList<String>();
-			if (produto.getNome().isBlank()) {
+			if (produto.getNome() == null) {
 				msg.add("Nome deve ser informado.");
 			}
 			if (produto.getValor() == null) {
