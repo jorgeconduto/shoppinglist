@@ -1,0 +1,12 @@
+pt\jcbox\shoppinglist\model\ListaCompras.class
+pt\jcbox\shoppinglist\security\ImplementacaoUserDetailsService.class
+pt\jcbox\shoppinglist\model\Perfil.class
+pt\jcbox\shoppinglist\repository\ProdutoRepository.class
+pt\jcbox\shoppinglist\model\Produto.class
+pt\jcbox\shoppinglist\repository\ListaComprasRepository.class
+pt\jcbox\shoppinglist\shoppinglist\ShoppinglistApplication.class
+pt\jcbox\shoppinglist\repository\AcessoRepository.class
+pt\jcbox\shoppinglist\model\Acesso.class
+pt\jcbox\shoppinglist\security\WebConfigSecurity.class
+pt\jcbox\shoppinglist\controller\ListaComprasController.class
+pt\jcbox\shoppinglist\shoppinglist\IndexController.class
