@@ -30,7 +30,7 @@ public class ShoppinglistApplication implements WebMvcConfigurer {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/autenticacao").setViewName("/autenticacao");
+		registry.addViewController("/login").setViewName("/login");
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 	}
 }

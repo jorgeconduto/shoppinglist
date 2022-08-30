@@ -39,15 +39,19 @@ public class WebConfigSecurity extends WebSecurityConfigurerAdapter {
 		 * AntPathRequestMatcher("/logout"));
 		 */
 
-		http.csrf().disable() // Desativa as configurações padrão de memória.
-				.authorizeRequests() // Pertimi restringir acessos
-				.antMatchers(HttpMethod.GET, "/").permitAll() // Qualquer utilizador acessa a pagina inicial
-				// .antMatchers(HttpMethod.GET, "/registo").hasAnyRole("ADMIN", "VISITA")
-				.anyRequest().authenticated().and().formLogin().permitAll() // permite qualquer utilizador
-				.loginPage("/autenticacao").defaultSuccessUrl("/listar").failureUrl("/autenticacao?error=true").and()
-				.logout().logoutSuccessUrl("/autenticacao")
-				// Mapeia URL de Logout e invalida utilizador autenticado
-				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
+		http.csrf()
+		.disable() // Desativa as configurações padrão de memória.
+		.authorizeRequests() // Pertimi restringir acessos
+		.antMatchers(HttpMethod.GET, "/").permitAll() // Qualquer utilizador acessa a pagina inicial
+		// .antMatchers(HttpMethod.GET, "/registo").hasAnyRole("ADMIN", "VISITA")
+		.anyRequest().authenticated()
+		.and().formLogin().permitAll() // permite qualquer utilizador
+		.loginPage("/login")
+		.defaultSuccessUrl("/listar")
+		.failureUrl("/login?error=true")
+		.and()
+		.logout().logoutSuccessUrl("/login") // Mapeia URL de Logout e invalida utilizador autenticado
+		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
 		http.csrf().disable();
 		http.headers().frameOptions().disable();
 	}
