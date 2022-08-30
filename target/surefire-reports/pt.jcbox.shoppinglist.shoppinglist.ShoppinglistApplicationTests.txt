@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pt.jcbox.shoppinglist.shoppinglist.ShoppinglistApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.05 s - in pt.jcbox.shoppinglist.shoppinglist.ShoppinglistApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.198 s - in pt.jcbox.shoppinglist.shoppinglist.ShoppinglistApplicationTests
