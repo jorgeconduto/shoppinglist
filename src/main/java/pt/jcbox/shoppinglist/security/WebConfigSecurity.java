@@ -47,7 +47,7 @@ public class WebConfigSecurity extends WebSecurityConfigurerAdapter {
 		.anyRequest().authenticated()
 		.and().formLogin().permitAll() // permite qualquer utilizador
 		.loginPage("/login")
-		.defaultSuccessUrl("/listar")
+		.defaultSuccessUrl("/listacompras/listar")
 		.failureUrl("/login?error=true")
 		.and()
 		.logout().logoutSuccessUrl("/login") // Mapeia URL de Logout e invalida utilizador autenticado
