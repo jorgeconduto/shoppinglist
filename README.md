@@ -1,2 +1,2 @@
 # shoppinglist
-Spring Boot MVC + Thymeleaf + JPA + PostgreSQL
+Spring Boot MVC + Spring Security + Maven + Thymeleaf + JPA + PostgreSQL
